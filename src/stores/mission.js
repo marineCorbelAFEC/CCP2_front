@@ -9,7 +9,7 @@ export const useMissionStore = defineStore('missionStore', {
   },
   actions: {
     async fetchMissions() {
-      const response = await fetch('http://localhost:3001/api/missions', {
+      const response = await fetch(`${import.meta.env.baseUrl}/missions`, {
         method: 'GET',
         credentials: 'include',
       });
